@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ejsstudios.com/sitemap.xml
+
+# Disallow common admin/system directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /.kiro/
+
+# Allow important files
+Allow: /images/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.webp
+Allow: /*.ico
+
+# Crawl delay (optional - adjust as needed)
+Crawl-delay: 1

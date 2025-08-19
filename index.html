@@ -1019,7 +1019,9 @@
 
 <body>
     <script>
+        document.getElementById("ViewServices").addEventListener("click", function() {
       fbq('track', 'ViewContent');
+        });
     </script>
     <!-- Skip to main content link -->
     <a href="#servicios" class="skip-link">Saltar al contenido principal</a>
@@ -1056,7 +1058,7 @@
             <p class="hero-subtitle">Desarrollamos soluciones tecnológicas que impulsan tu negocio hacia el futuro.
                 Desde aplicaciones móviles hasta videojuegos, convertimos tus ideas en realidad digital.</p>
             <div class="hero-buttons">
-                <a href="#servicios" class="btn btn-primary btn-hero" aria-label="Explorar servicios de EJS Studios">
+                <a id="ViewServices" href="#servicios" class="btn btn-primary btn-hero" aria-label="Explorar servicios de EJS Studios">
                     Explora Nuestros Servicios
                     <i class="fas fa-arrow-right"></i>
                 </a>

@@ -1018,11 +1018,6 @@
 </head>
 
 <body>
-    <script>
-        document.getElementById("ViewServices").addEventListener("click", function() {
-      fbq('track', 'ViewContent');
-        });
-    </script>
     <!-- Skip to main content link -->
     <a href="#servicios" class="skip-link">Saltar al contenido principal</a>
 
@@ -1273,6 +1268,11 @@
         </div>
     </footer>
 
+    <script>
+        document.getElementById("ViewServices").addEventListener("click", function() {
+          fbq('track', 'ViewContent');
+        });
+    </script>
     <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

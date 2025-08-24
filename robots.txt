@@ -1,25 +1,84 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+# Sitemaps - GitHub Pages optimized
 Sitemap: https://ejsstudios.com/sitemap.xml
+Sitemap: https://ejsstudios.com/sitemap-index.xml
+Sitemap: https://ejsstudios.com/feed.xml
 
-# Disallow common admin/system directories
-Disallow: /admin/
-Disallow: /private/
+# Disallow GitHub Pages specific directories
 Disallow: /.git/
+Disallow: /.github/
+Disallow: /_site/
+Disallow: /.sass-cache/
+Disallow: /.jekyll-cache/
+Disallow: /vendor/
+Disallow: /node_modules/
 Disallow: /.vscode/
 Disallow: /.kiro/
+Disallow: /admin/
+Disallow: /private/
 
-# Allow important files
+# Allow important resources
 Allow: /images/
+Allow: /assets/
 Allow: /*.css
 Allow: /*.js
 Allow: /*.png
 Allow: /*.jpg
 Allow: /*.jpeg
 Allow: /*.webp
+Allow: /*.svg
 Allow: /*.ico
+Allow: /*.woff
+Allow: /*.woff2
+Allow: /*.ttf
+Allow: /*.eot
 
-# Crawl delay (optional - adjust as needed)
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
 Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+# Social media bots
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

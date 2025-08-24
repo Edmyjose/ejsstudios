@@ -1,0 +1,76 @@
+# GitHub Pages Configuration for EJS Studios
+# Configuración optimizada para SEO
+
+# Site settings
+title: "EJS Studios - Desarrollo Tecnológico México"
+description: "Líderes en desarrollo web, apps Android, videojuegos Unity y soluciones IT en México. Transformamos ideas en realidad digital."
+url: "https://ejsstudios.com"
+baseurl: ""
+
+# SEO settings
+author: "EJS Studios"
+twitter:
+  username: ejsstudios
+  card: summary_large_image
+
+# Social profiles
+social:
+  name: EJS Studios
+  links:
+    - https://ejsstudios.com
+    - https://wa.me/584242920043
+    - https://play.google.com/store/apps/developer?id=EJS+Studios
+    - https://manifestavida.lat
+
+# Logo and images
+logo: "/images/ejs_studios_logo.png"
+image: "/images/hero.jpeg"
+
+# Language and locale
+lang: es_MX
+locale: es_MX
+
+# Google Analytics
+google_analytics: G-YZDT7QXWXX
+
+# Google Tag Manager
+google_tag_manager: GTM-WMCL6VWC
+
+# Plugins for GitHub Pages
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# Exclude files
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - .gitignore
+
+# Include files
+include:
+  - _pages
+  - robots.txt
+  - sitemap.xml
+  - .htaccess
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+
+# Permalink structure
+permalink: /:title/
+
+# Compression
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: [html, head, body]

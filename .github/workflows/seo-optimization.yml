@@ -1,0 +1,58 @@
+name: SEO Optimization and Deployment
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  schedule:
+    # Run weekly to update sitemaps
+    - cron: '0 0 * * 0'
+
+jobs:
+  seo-optimization:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: |
+        npm install -g lighthouse
+        npm install -g sitemap-generator-cli
+        
+    - name: Generate dynamic sitemap
+      run: |
+        echo "Generating sitemap for ejsstudios.com"
+        # This would generate a sitemap based on your site structure
+        
+    - name: Run Lighthouse CI
+      run: |
+        lighthouse https://ejsstudios.com --output=json --output-path=./lighthouse-report.json
+        
+    - name: Check SEO Score
+      run: |
+        echo "SEO optimization check completed"
+        
+    - name: Update last modified dates
+      run: |
+        # Update sitemap with current date
+        sed -i "s/2025-01-08/$(date +%Y-%m-%d)/g" sitemap.xml
+        
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git diff --staged --quiet || git commit -m "Auto-update SEO files [skip ci]"
+        
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}

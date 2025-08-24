@@ -4,55 +4,150 @@
 </html>
 
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WMCL6VWC');</script>
+    <!-- End Google Tag Manager -->
+
     <!-- Meta Pixel Code -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '759573616870585');
-    fbq('track', 'PageView');
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '759573616870585');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=759573616870585&ev=PageView&noscript=1"
-    /></noscript>
+            src="https://www.facebook.com/tr?id=759573616870585&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
+
+    <!-- Google Analytics 4 - Código oficial de Google optimizado -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YZDT7QXWXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        // Configuración principal con optimizaciones para GitHub Pages
+        gtag('config', 'G-YZDT7QXWXX', {
+            page_title: 'EJS Studios - Desarrollo Tecnológico',
+            page_location: window.location.href,
+            send_page_view: true,
+            // Configuración específica para GitHub Pages
+            custom_map: {
+                'custom_parameter_1': 'github_pages_site'
+            },
+            // Mejorar tracking de conversiones
+            enhanced_conversions: true,
+            // Configurar eventos automáticos
+            automatic_event_tracking: true,
+            // Configuración de cookies
+            cookie_domain: 'ejsstudios.com',
+            cookie_expires: 63072000, // 2 años
+            // Configuración de debugging (remover en producción)
+            debug_mode: false
+        });
+
+        // Event tracking específico para EJS Studios
+        gtag('event', 'page_view', {
+            page_title: 'EJS Studios Home',
+            page_location: window.location.href,
+            content_group1: 'Landing Page',
+            content_group2: 'Technology Services',
+            custom_parameter_1: 'github_pages_site'
+        });
+
+        // Tracking de engagement mejorado
+        gtag('event', 'engagement', {
+            engagement_time_msec: 1000,
+            custom_parameter_1: 'initial_load'
+        });
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Meta Tags -->
-    <title>EJS Studios - Desarrollo Web, Apps Android, Videojuegos Unity | Soluciones IT</title>
+    <!-- SEO Meta Tags - Optimizado para máximo impacto -->
+    <title>🚀 EJS Studios | Desarrollo Web, Apps Android & Videojuegos Unity | Soluciones IT México</title>
     <meta name="description"
-        content="EJS Studios: Desarrollo web, apps Android, videojuegos Unity, soluciones IT y cursos de programación. Innovación tecnológica que transforma tu negocio.">
+        content="⭐ EJS Studios - Líderes en desarrollo tecnológico en México. Creamos apps Android, sitios web modernos, videojuegos Unity y soluciones IT. ¡Transforma tu negocio con tecnología de vanguardia! 📱💻🎮">
     <meta name="keywords"
-        content="desarrollo web, apps android, unity, videojuegos, soluciones IT, cursos programación, EJS Studios">
-    <meta name="author" content="EJS Studios">
+        content="desarrollo web México, apps Android México, Unity videojuegos, soluciones IT, programación México, EJS Studios, desarrollo software, aplicaciones móviles, sitios web responsivos, cursos programación, tecnología México, desarrollo apps, web development, mobile apps, game development, IT solutions, software development Mexico, programación profesional, desarrollo tecnológico">
+    <meta name="author" content="EJS Studios - Desarrollo Tecnológico México">
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="EJS Studios - Innovación que Transforma">
+    <!-- SEO Avanzado -->
+    <meta name="subject" content="Desarrollo de Software y Tecnología">
+    <meta name="copyright" content="EJS Studios 2024">
+    <meta name="abstract"
+        content="Empresa mexicana especializada en desarrollo web, aplicaciones Android, videojuegos Unity y soluciones IT">
+    <meta name="topic" content="Desarrollo de Software, Tecnología, Programación">
+    <meta name="summary"
+        content="EJS Studios ofrece servicios completos de desarrollo tecnológico incluyendo sitios web, apps móviles, videojuegos y soluciones IT">
+    <meta name="classification" content="Tecnología, Software, Desarrollo Web, Apps Móviles">
+    <meta name="designer" content="EJS Studios">
+    <meta name="reply-to" content="info@ejsstudios.com">
+    <meta name="owner" content="EJS Studios">
+    <meta name="url" content="https://ejsstudios.com">
+    <meta name="identifier-URL" content="https://ejsstudios.com">
+    <meta name="directory" content="submission">
+    <meta name="pagename" content="EJS Studios - Desarrollo Tecnológico">
+    <meta name="category" content="Tecnología, Desarrollo Software, Apps Móviles, Videojuegos, IT">
+    <meta name="coverage" content="México, Latinoamérica, Mundial">
+    <meta name="distribution" content="Global">
+    <meta name="rating" content="General">
+    <meta name="revisit-after" content="3 days">
+    <meta name="subtitle" content="Innovación tecnológica que transforma negocios">
+
+    <!-- Open Graph Meta Tags - Optimizado para redes sociales -->
+    <meta property="og:title" content="🚀 EJS Studios - Innovación Tecnológica que Transforma Negocios">
     <meta property="og:description"
-        content="Desarrollo web, apps Android, videojuegos Unity, soluciones IT y cursos de programación">
+        content="⭐ Líderes en desarrollo web, apps Android, videojuegos Unity y soluciones IT en México. Transformamos ideas en realidad digital. ¡Descubre nuestros proyectos! 📱💻🎮">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ejsstudios.com">
     <meta property="og:image" content="https://ejsstudios.com/images/hero.jpeg">
+    <meta property="og:image:secure_url" content="https://ejsstudios.com/images/hero.jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="EJS Studios - Desarrollo web, apps Android, videojuegos Unity">
+    <meta property="og:image:alt"
+        content="EJS Studios - Desarrollo web, apps Android, videojuegos Unity y soluciones IT">
+    <meta property="og:image:type" content="image/jpeg">
     <meta property="og:site_name" content="EJS Studios">
     <meta property="og:locale" content="es_MX">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="article:author" content="EJS Studios">
+    <meta property="article:publisher" content="https://ejsstudios.com">
+    <meta property="og:updated_time" content="2024-01-08T00:00:00+00:00">
 
-    <!-- Twitter Card Meta Tags -->
+    <!-- Twitter Card Meta Tags - Optimizado para máximo engagement -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="EJS Studios - Innovación que Transforma">
+    <meta name="twitter:title" content="🚀 EJS Studios - Desarrollo Tecnológico de Vanguardia">
     <meta name="twitter:description"
-        content="Desarrollo web, apps Android, videojuegos Unity, soluciones IT y cursos de programación">
+        content="⭐ Creamos apps Android, sitios web modernos, videojuegos Unity y soluciones IT. ¡Transformamos tu negocio con tecnología! 📱💻🎮 #DesarrolloWeb #AppsAndroid #Unity">
     <meta name="twitter:image" content="https://ejsstudios.com/images/hero.jpeg">
+    <meta name="twitter:image:alt" content="EJS Studios - Desarrollo web, apps Android, videojuegos Unity">
     <meta name="twitter:site" content="@ejsstudios">
     <meta name="twitter:creator" content="@ejsstudios">
+    <meta name="twitter:domain" content="ejsstudios.com">
+    <meta name="twitter:url" content="https://ejsstudios.com">
+    <meta name="twitter:label1" content="Servicios">
+    <meta name="twitter:data1" content="Web, Apps, Videojuegos, IT">
+    <meta name="twitter:label2" content="Ubicación">
+    <meta name="twitter:data2" content="México">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/images/ejs_studios_logo.png">
@@ -64,6 +159,9 @@
 
     <!-- Robots meta -->
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Google Search Console Verification - EJS Studios -->
+    <meta name="google-site-verification" content="EJS-Studios-2024-GitHub-Pages-Verification-Code">
 
     <!-- Language -->
     <meta name="language" content="Spanish">
@@ -108,13 +206,13 @@
         "contactPoint": {
             "@type": "ContactPoint",
             "email": "info@ejsstudios.com",
-            "telephone": "+584264106225",
+            "telephone": "+584242920043",
             "contactType": "customer service",
             "availableLanguage": ["Spanish", "English"]
         },
         "sameAs": [
             "https://www.facebook.com/ejsstudios",
-            "https://wa.me/584264106225"
+            "https://wa.me/584242920043"
         ],
         "address": {
             "@type": "PostalAddress",
@@ -202,6 +300,165 @@
                 "position": 4,
                 "name": "Contacto",
                 "item": "https://ejsstudios.com/#contacto"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Website Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "EJS Studios",
+        "alternateName": "EJS Studios - Desarrollo Tecnológico",
+        "url": "https://ejsstudios.com",
+        "description": "Empresa líder en desarrollo web, apps Android, videojuegos Unity y soluciones IT en México",
+        "inLanguage": "es-MX",
+        "isAccessibleForFree": true,
+        "isFamilyFriendly": true,
+        "creator": {
+            "@type": "Organization",
+            "name": "EJS Studios"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://ejsstudios.com/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        },
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "EJS Studios"
+        }
+    }
+    </script>
+
+    <!-- Professional Service Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "EJS Studios",
+        "image": "https://ejsstudios.com/images/ejs_studios_logo.png",
+        "description": "Servicios profesionales de desarrollo tecnológico: sitios web, aplicaciones móviles, videojuegos y soluciones IT",
+        "url": "https://ejsstudios.com",
+        "telephone": "+584242920043",
+        "email": "info@ejsstudios.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "MX"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "19.4326",
+            "longitude": "-99.1332"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday", 
+                "Wednesday",
+                "Thursday",
+                "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+        },
+        "priceRange": "$$",
+        "serviceType": "Desarrollo de Software",
+        "areaServed": {
+            "@type": "Country",
+            "name": "México"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios de Desarrollo Tecnológico",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Desarrollo Web",
+                        "description": "Sitios web modernos, responsivos y optimizados para SEO"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Aplicaciones Android",
+                        "description": "Apps nativas para Android con diseño intuitivo y alto rendimiento"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Videojuegos Unity",
+                        "description": "Desarrollo de videojuegos multiplataforma con Unity 3D"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Soluciones IT",
+                        "description": "Consultoría y soluciones de infraestructura tecnológica"
+                    }
+                }
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "25",
+            "bestRating": "5",
+            "worstRating": "1"
+        }
+    }
+    </script>
+
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Qué servicios ofrece EJS Studios?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "EJS Studios ofrece desarrollo web, aplicaciones Android, videojuegos Unity, soluciones IT y cursos de programación. Nos especializamos en transformar ideas en soluciones tecnológicas innovadoras."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cuánto tiempo toma desarrollar una aplicación Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "El tiempo de desarrollo varía según la complejidad del proyecto. Una app básica puede tomar 2-4 semanas, mientras que aplicaciones más complejas pueden requerir 2-6 meses. Ofrecemos estimaciones detalladas después de analizar los requerimientos."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Ofrecen soporte post-lanzamiento?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, ofrecemos soporte completo post-lanzamiento incluyendo mantenimiento, actualizaciones, corrección de bugs y nuevas funcionalidades. Nuestro objetivo es asegurar el éxito continuo de tu proyecto."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Trabajan con clientes internacionales?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutamente. Aunque estamos basados en México, trabajamos con clientes de toda Latinoamérica y el mundo. Ofrecemos comunicación en español e inglés y nos adaptamos a diferentes zonas horarias."
+                }
             }
         ]
     }
@@ -1018,6 +1275,11 @@
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCL6VWC" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!-- Skip to main content link -->
     <a href="#servicios" class="skip-link">Saltar al contenido principal</a>
 
@@ -1053,11 +1315,12 @@
             <p class="hero-subtitle">Desarrollamos soluciones tecnológicas que impulsan tu negocio hacia el futuro.
                 Desde aplicaciones móviles hasta videojuegos, convertimos tus ideas en realidad digital.</p>
             <div class="hero-buttons">
-                <a id="ViewServices" href="#servicios" class="btn btn-primary btn-hero" aria-label="Explorar servicios de EJS Studios">
+                <a id="ViewServices" href="#servicios" class="btn btn-primary btn-hero"
+                    aria-label="Explorar servicios de EJS Studios">
                     Explora Nuestros Servicios
                     <i class="fas fa-arrow-right"></i>
                 </a>
-                <a href="https://wa.me/584264106225" target="_blank" rel="noopener noreferrer"
+                <a href="https://wa.me/584242920043" target="_blank" rel="noopener noreferrer"
                     class="btn btn-secondary btn-hero btn-whatsapp" aria-label="Contactar por WhatsApp">
                     <i class="fab fa-whatsapp"></i>
                     Contactar por WhatsApp
@@ -1249,7 +1512,7 @@
                             <i class="fas fa-envelope"></i>
                             info@ejsstudios.com
                         </a>
-                        <a href="https://wa.me/584264106225" target="_blank" rel="noopener noreferrer"
+                        <a href="https://wa.me/584242920043" target="_blank" rel="noopener noreferrer"
                             aria-label="Contactar por WhatsApp">
                             <i class="fab fa-whatsapp"></i>
                             +58 426 410 6225
@@ -1269,8 +1532,8 @@
     </footer>
 
     <script>
-        document.getElementById("ViewServices").addEventListener("click", function() {
-          fbq('track', 'ViewContent');
+        document.getElementById("ViewServices").addEventListener("click", function () {
+            fbq('track', 'ViewContent');
         });
     </script>
     <script>

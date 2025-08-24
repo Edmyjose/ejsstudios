@@ -1,0 +1,55 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <description>EJS Studios - Desarrollo Web, Apps Android, Videojuegos Unity y Soluciones IT</description>
+    <link>https://ejsstudios.com/</link>
+    <atom:link href="https://ejsstudios.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <generator>Jekyll v{{ jekyll.version }}</generator>
+    <language>es-MX</language>
+    <managingEditor>info@ejsstudios.com (EJS Studios)</managingEditor>
+    <webMaster>info@ejsstudios.com (EJS Studios)</webMaster>
+    <copyright>Copyright 2024 EJS Studios</copyright>
+    <category>Tecnología</category>
+    <category>Desarrollo de Software</category>
+    <category>Apps Móviles</category>
+    <category>Videojuegos</category>
+    
+    <item>
+      <title>EJS Studios - Servicios de Desarrollo Tecnológico</title>
+      <description>Descubre nuestros servicios de desarrollo web, aplicaciones Android, videojuegos Unity y soluciones IT. Transformamos ideas en realidad digital.</description>
+      <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+      <link>https://ejsstudios.com/</link>
+      <guid isPermaLink="true">https://ejsstudios.com/</guid>
+      <category>Desarrollo Web</category>
+      <category>Apps Android</category>
+      <category>Unity</category>
+      <category>Soluciones IT</category>
+    </item>
+    
+    <item>
+      <title>Desarrollo de Aplicaciones Android Profesionales</title>
+      <description>Creamos aplicaciones Android nativas con diseño intuitivo y alto rendimiento. Disponibles en Google Play Store.</description>
+      <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+      <link>https://ejsstudios.com/#servicios</link>
+      <guid isPermaLink="true">https://ejsstudios.com/#servicios</guid>
+      <category>Apps Android</category>
+      <category>Desarrollo Móvil</category>
+    </item>
+    
+    <item>
+      <title>Portafolio EJS Studios - Proyectos Destacados</title>
+      <description>Explora nuestros proyectos más representativos incluyendo ManifiestaVida.lat y nuestras aplicaciones en Google Play Store.</description>
+      <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+      <link>https://ejsstudios.com/#portafolio</link>
+      <guid isPermaLink="true">https://ejsstudios.com/#portafolio</guid>
+      <category>Portafolio</category>
+      <category>Proyectos</category>
+    </item>
+  </channel>
+</rss>

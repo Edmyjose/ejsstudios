@@ -33,7 +33,7 @@ jobs:
         
     - name: Run Lighthouse CI
       run: |
-        lighthouse https://ejsstudios.com --output=json --output-path=./lighthouse-report.json
+        lighthouse https://ejsstudios.com --output=json --output-path=./lighthouse-report.json --chrome-flags="--headless --no-sandbox --disable-gpu"
         
     - name: Check SEO Score
       run: |

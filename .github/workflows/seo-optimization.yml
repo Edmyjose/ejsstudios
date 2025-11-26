@@ -6,53 +6,59 @@ on:
   pull_request:
     branches: [ main, master ]
   schedule:
-    # Run weekly to update sitemaps
     - cron: '0 0 * * 0'
+
+permissions:
+  contents: write
 
 jobs:
   seo-optimization:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - uses: actions/checkout@v3
-    
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        persist-credentials: true
+
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
         node-version: '18'
-        
+
     - name: Install dependencies
       run: |
         npm install -g lighthouse
         npm install -g sitemap-generator-cli
-        
+
     - name: Generate dynamic sitemap
       run: |
         echo "Generating sitemap for ejsstudios.com"
-        # This would generate a sitemap based on your site structure
-        
-    - name: Run Lighthouse CI
+        # Aquí puedes ejecutar tu comando real para generar sitemap
+
+    - name: Run Lighthouse (SEO only)
       run: |
-        lighthouse https://ejsstudios.com --output=json --output-path=./lighthouse-report.json --chrome-flags="--headless --no-sandbox --disable-gpu"
-        
+        lighthouse https://ejsstudios.com --only-categories=seo --output=json --output-path=./lighthouse-report.json --chrome-flags="--headless --no-sandbox --disable-gpu"
+        # Si necesitas métricas de Performance reales, considera:
+        # lighthouse https://ejsstudios.com --throttling-method=devtools --output=json --output-path=./lighthouse-report.json --chrome-flags="--headless --no-sandbox --disable-gpu"
+
     - name: Check SEO Score
       run: |
         echo "SEO optimization check completed"
-        
+
     - name: Update last modified dates
       run: |
-        # Update sitemap with current date
         sed -i "s/2025-01-08/$(date +%Y-%m-%d)/g" sitemap.xml
-        
+
     - name: Commit changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add .
         git diff --staged --quiet || git commit -m "Auto-update SEO files [skip ci]"
-        
+
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
+        branch: ${{ github.ref_name }}

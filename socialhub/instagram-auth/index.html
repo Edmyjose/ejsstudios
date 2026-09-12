@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vinculando con Social Hub...</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .btn {
+            background: #007bff;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>¡Autorización recibida!</h2>
+    <p>Estamos redirigiéndote de vuelta a la aplicación Social Hub.</p>
+    <a id="btn-manual" class="btn" href="#">PULSA AQUÍ PARA VOLVER A LA APP</a>
+
+    <script>
+        // Obtener el código de la URL actual
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('code');
+
+        if (code) {
+            // Creamos el Deep Link usando el esquema personalizado que SIEMPRE funciona
+            const deepLink = "socialhub://instagram-auth?code=" + code;
+            document.getElementById('btn-manual').href = deepLink;
+
+            // Intento de redirección automática al esquema personalizado
+            window.location.href = deepLink;
+        } else {
+            document.body.innerHTML = "<h1>Error: No se recibió el código de Instagram.</h1>";
+        }
+    </script>
+</body>
+
+</html>

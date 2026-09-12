@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Redirigiendo a Social Hub...</title>
+</head>
+
+<body>
+    <h1>Autorización Exitosa</h1>
+    <p>Si la aplicación no se abre automáticamente, pulsa el botón:</p>
+    <a id="retry" href="#">Abrir Social Hub</a>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        const deepLink = "socialhub://threads-auth?code=" + code;
+        document.getElementById('retry').href = deepLink;
+        // Intento de redirección automática
+        window.location.href = deepLink;
+    </script>
+</body>
+
+</html>

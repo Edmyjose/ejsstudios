@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.ejsstudios.socialhub",
+      "sha256_cert_fingerprints": [
+        "93:B6:73:9A:7F:F5:57:28:1F:07:A8:5A:34:E1:68:73:32:C7:74:12:EB:FC:A7:03:75:74:4C:5F:25:79:F1:0F"
+      ]
+    }
+  }
+]

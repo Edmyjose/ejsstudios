@@ -1,48 +1,56 @@
-<!--
-  ~ Copyright (c) 2026. EJS Studios. Todos los derechos reservados.
-  ~ Este código fuente es propiedad de EJS Studios y está protegido por las leyes de derechos de autor.
-  ~ No se permite la copia, distribución, modificación o uso de este código fuente, total o parcialmente, sin
-  ~ el consentimiento previo y por escrito de EJS Studios.
-  ~
-  ~ Cualquier uso no autorizado de este código fuente será perseguido legalmente según las leyes aplicables.
-  ~
-  ~ Para obtener una licencia de uso, contacta a: info@ejsstudios.com
-  -->
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - Social Hub AI</title>
+    <title>Política de Privacidad - HubSocial AI</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1 { color: #000; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { margin-top: 30px; color: #333; }
-        .footer { margin-top: 50px; font-size: 0.8em; color: #777; text-align: center; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1e293b; max-width: 800px; margin: 0 auto; padding: 40px 20px; background-color: #f8fafc; }
+        .container { background: #ffffff; padding: 36px 32px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+        h1 { color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; margin-top: 0; font-size: 26px; }
+        h2 { margin-top: 28px; color: #1e293b; font-size: 19px; }
+        p, li { color: #475569; font-size: 15px; }
+        ul { padding-left: 20px; }
+        .footer { margin-top: 40px; font-size: 0.85em; color: #94a3b8; text-align: center; border-top: 1px solid #e2e8f0; padding-top: 20px; }
+        a { color: #2563eb; text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
-    <h1>Política de Privacidad de Social Hub AI</h1>
-    <p>Última actualización: 2026</p>
+    <div class="container">
+        <h1>Política de Privacidad de HubSocial AI</h1>
+        <p><strong>Última actualización:</strong> 2026</p>
 
-    <p>En <strong>Social Hub AI</strong>, nos tomamos muy en serio tu privacidad. Esta aplicación está diseñada para gestionar tus redes sociales (incluyendo Threads) de manera eficiente.</p>
+        <p>En <strong>HubSocial AI</strong>, desarrollada por <strong>EJS Studios</strong>, nos comprometemos a proteger la privacidad y los datos de nuestros usuarios. Esta política describe cómo recopilamos, usamos y protegemos tu información al interactuar con nuestra aplicación móvil y los servicios de redes sociales conectados (incluyendo TikTok, Meta/Instagram/Facebook/Threads, X/Twitter, LinkedIn, Reddit y YouTube).</p>
 
-    <h2>1. Datos que recopilamos</h2>
-    <p>Recopilamos únicamente los datos necesarios para el funcionamiento de la aplicación:</p>
-    <ul>
-        <li>Información de perfil público (nombre de usuario, foto de perfil).</li>
-        <li>Tokens de acceso para publicar y leer contenido según los permisos otorgados.</li>
-    </ul>
+        <h2>1. Datos que Recopilamos</h2>
+        <p>Recopilamos únicamente los datos mínimos indispensables para proporcionar los servicios de organización y programación autorizados:</p>
+        <ul>
+            <li><strong>Información de Perfil Básico:</strong> Nombre público, identificador de cuenta y avatar público obtenido mediante OAuth al vincular tu cuenta (ej. <code>user.info.basic</code> de TikTok).</li>
+            <li><strong>Tokens de Autorización OAuth:</strong> Claves de acceso emitidas por las plataformas oficiales para permitir el despacho de contenidos autorizados.</li>
+            <li><strong>Borradores y Archivos Multimedia:</strong> Videos, imágenes y textos que el usuario decide importar en su bóveda de medios de marca para planificar sus publicaciones.</li>
+        </ul>
 
-    <h2>2. Uso de la información</h2>
-    <p>La información se utiliza exclusivamente para permitirte publicar contenido y visualizar tus estadísticas dentro de la aplicación.</p>
+        <h2>2. Uso y Procesamiento de la Información</h2>
+        <p>La información recopilada se utiliza con el fin exclusivo de:</p>
+        <ul>
+            <li>Permitir al usuario visualizar sus canales conectados y organizar sus campañas de contenido.</li>
+            <li>Publicar o enviar a borradores de TikTok los videos que el usuario haya revisado y aprobado explícitamente en el calendario programado.</li>
+            <li>Tus datos y contenidos privados nunca son vendidos a terceros ni utilizados para entrenar modelos de lenguaje públicos.</li>
+        </ul>
 
-    <h2>3. Eliminación de datos</h2>
-    <p>Puedes solicitar la eliminación de tus datos en cualquier momento siguiendo las instrucciones en nuestra página de <a href="delete-data.html">Eliminación de Datos</a>.</p>
+        <h2>3. Almacenamiento Seguro y Cifrado</h2>
+        <p>Toda la comunicación se realiza mediante protocolos de transporte seguros (TLS/HTTPS). Los datos de usuario se almacenan de forma aislada y privada con reglas de seguridad estrictas en Cloud Firestore y Firebase Storage.</p>
 
-    <div class="footer">
-        &copy; 2026 EJS Studios. Todos los derechos reservados.
+        <h2>4. Revocación de Permisos y Eliminación de Datos</h2>
+        <p>Puedes revocar el acceso de HubSocial AI en cualquier momento desde la configuración de seguridad de tu cuenta de TikTok o desde la sección de Ajustes de la aplicación móvil. Para solicitar la eliminación definitiva e inmediata de todos tus datos, puedes acceder a nuestra página de <a href="delete-data.html">Eliminación de Datos</a> o contactarnos directamente.</p>
+
+        <h2>5. Contacto</h2>
+        <p>Si tienes preguntas sobre esta política o el tratamiento de tus datos personales, puedes escribirnos a: <a href="mailto:info@ejsstudios.com">info@ejsstudios.com</a>.</p>
+
+        <div class="footer">
+            <p>&copy; 2026 EJS Studios. Todos los derechos reservados.</p>
+        </div>
     </div>
 </body>
 </html>

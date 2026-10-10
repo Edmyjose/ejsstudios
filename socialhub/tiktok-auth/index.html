@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinculando con TikTok... | HubSocial AI</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            text-align: center;
+            padding: 50px 20px;
+            background: #010101;
+            color: #ffffff;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+        }
+
+        .card {
+            background: #121212;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            max-width: 420px;
+            width: 100%;
+        }
+
+        .icon-container {
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .tiktok-logo {
+            width: 68px;
+            height: 68px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin: 0 0 12px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #25F4EE, #FE2C55);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            color: #a0a0a0;
+            font-size: 15px;
+            line-height: 1.5;
+            margin: 0 0 24px;
+        }
+
+        .btn {
+            background: #FE2C55;
+            color: #ffffff;
+            padding: 15px 32px;
+            text-decoration: none;
+            border-radius: 9999px;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 15px rgba(254, 44, 85, 0.4);
+        }
+
+        .btn:hover {
+            background: #e02447;
+            transform: scale(1.02);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .footer-note {
+            margin-top: 24px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="icon-container">
+            <svg class="tiktok-logo" viewBox="0 0 448 512" fill="currentColor">
+                <path fill="#25F4EE" d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
+                <path fill="#FE2C55" d="M440,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,177,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,373,102.39a121.43,121.43,0,0,0,67,20.14Z" style="mix-blend-mode: screen;"/>
+            </svg>
+        </div>
+        <h2>¡Autorización de TikTok Recibida!</h2>
+        <p>Estamos redirigiéndote de vuelta a la aplicación <strong>HubSocial AI</strong> para completar la vinculación.</p>
+
+        <a id="btn-manual" class="btn" href="#">ABRIR HUBSOCIAL AI</a>
+
+        <div class="footer-note">
+            Si la aplicación no se abre sola en 3 segundos, pulsa el botón de arriba.
+        </div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('code');
+        const state = params.get('state');
+        const error = params.get('error') || params.get('error_description');
+
+        if (code) {
+            const query = "?code=" + encodeURIComponent(code) + (state ? "&state=" + encodeURIComponent(state) : "");
+            const deepLinkHubSocial = "hubsocial://tiktok-auth" + query;
+            const deepLinkSocialHub = "socialhub://tiktok-auth" + query;
+
+            document.getElementById('btn-manual').href = deepLinkHubSocial;
+
+            // Redirección inmediata a HubSocial AI
+            window.location.href = deepLinkHubSocial;
+
+            // Reintento de seguridad con esquema alternativo
+            setTimeout(() => {
+                window.location.href = deepLinkSocialHub;
+            }, 1000);
+        } else if (error) {
+            document.querySelector('.card').innerHTML = `
+                <div style="font-size: 3em; margin-bottom: 15px;">⚠️</div>
+                <h2 style="color: #FE2C55; -webkit-text-fill-color: initial;">Error de Autorización</h2>
+                <p>${decodeURIComponent(error)}</p>
+                <a class="btn" style="background: #333;" href="hubsocial://tiktok-auth">Volver a HubSocial AI</a>
+            `;
+        } else {
+            document.querySelector('.card').innerHTML = `
+                <div style="font-size: 3em; margin-bottom: 15px;">⚠️</div>
+                <h2 style="color: #FE2C55; -webkit-text-fill-color: initial;">Falta Código de Autorización</h2>
+                <p>No se recibió el código de autorización de TikTok. Por favor, intenta vincular tu cuenta de nuevo desde la app.</p>
+                <a class="btn" style="background: #333;" href="hubsocial://tiktok-auth">Volver a HubSocial AI</a>
+            `;
+        }
+    </script>
+</body>
+
+</html>

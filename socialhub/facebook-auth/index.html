@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinculando con Facebook... | HubSocial AI</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            text-align: center;
+            padding: 50px 20px;
+            background: #f4f7f6;
+            color: #333;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            display: inline-block;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .btn {
+            background: #1877F2;
+            color: white;
+            padding: 16px 30px;
+            text-decoration: none;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 25px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .btn:hover {
+            background: #1464cc;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .logo {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #666;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="logo">📘</div>
+        <h2>¡Autorización de Facebook Exitosa!</h2>
+        <p>Estamos redirigiéndote de vuelta a la aplicación <strong>HubSocial AI</strong> para completar la vinculación.</p>
+
+        <a id="btn-manual" class="btn" href="#">ABRIR APLICACIÓN</a>
+
+        <p style="margin-top: 20px; font-size: 12px; color: #999;">
+            Si la aplicación no se abre sola en 3 segundos, pulsa el botón de arriba.
+        </p>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('code');
+        const state = params.get('state');
+
+        if (code) {
+            let deepLink = "hubsocial://facebook-auth?code=" + encodeURIComponent(code);
+            if (state) {
+                deepLink += "&state=" + encodeURIComponent(state);
+            }
+
+            document.getElementById('btn-manual').href = deepLink;
+            window.location.href = deepLink;
+
+            setTimeout(() => {
+                window.location.href = deepLink;
+            }, 1000);
+        } else {
+            document.body.innerHTML = `
+                <div class="card">
+                    <div class="logo">⚠️</div>
+                    <h2>Sesión Completada</h2>
+                    <p>Por favor regresa a la aplicación HubSocial AI para continuar con la selección de tus páginas.</p>
+                    <a href="/socialhub/privacy.html" class="btn" style="background: #666;">Volver</a>
+                </div>
+            `;
+        }
+    </script>
+</body>
+
+</html>

@@ -79,13 +79,8 @@
             // Actualizar el enlace del botón manual
             document.getElementById('btn-manual').href = deepLink;
 
-            // Intento de redirección automática inmediata
+            // Redirección única inmediata
             window.location.href = deepLink;
-
-            // Reintento de seguridad después de un pequeño retraso
-            setTimeout(() => {
-                window.location.href = deepLink;
-            }, 1000);
         } else {
             document.body.innerHTML = `
                 <div class="card">

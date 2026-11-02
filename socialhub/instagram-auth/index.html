@@ -70,11 +70,15 @@
     <script>
         // Capturar los parámetros de la URL (el 'code' enviado por Instagram)
         const params = new URLSearchParams(window.location.search);
-        const code = params.get('code');
+        let code = params.get('code');
 
         if (code) {
-            // Construir el Deep Link personalizado para Android
-            const deepLink = "hubsocial://instagram-auth?code=" + code;
+            // Eliminar hash residual (#_ o #) que Instagram añade al final de la URL
+            code = code.replace(/#_.*$/, '').replace(/#.*$/, '');
+
+            // Codificar explícitamente con encodeURIComponent para que '+' y caracteres especiales
+            // no se corrompan como espacios al ser decodificados por Android Uri.getQueryParameter
+            const deepLink = "hubsocial://instagram-auth?code=" + encodeURIComponent(code);
 
             // Actualizar el enlace del botón manual
             document.getElementById('btn-manual').href = deepLink;

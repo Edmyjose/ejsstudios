@@ -1,13 +1,17 @@
 [
   {
     "relation": [
-      "delegate_permission/common.handle_all_urls"
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
     ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.ejsstudios.socialhub",
       "sha256_cert_fingerprints": [
-        "93:B6:73:9A:7F:F5:57:28:1F:07:A8:5A:34:E1:68:73:32:C7:74:12:EB:FC:A7:03:75:74:4C:5F:25:79:F1:0F"
+        "93:B6:73:9A:7F:F5:57:28:1F:07:A8:5A:34:E1:68:73:32:C7:74:12:EB:FC:A7:03:75:74:4C:5F:25:79:F1:0F",
+        "0B:A5:7A:81:B5:5E:01:9D:19:E1:E6:94:A7:7A:2D:2C:33:4E:0D:D2:CD:B6:EC:F9:9A:6B:A8:15:D2:25:4D:8F",
+        "EC:99:50:7F:D2:A1:2F:4E:D4:B4:42:E1:A5:D3:04:D3:31:D1:48:C2:23:02:79:15:64:C2:45:B6:2C:38:91:11",
+        "1D:4F:3D:93:B7:E6:1E:35:C5:4F:9A:AF:F8:BC:B0:4F:B0:5D:6C:EE:81:48:C3:2E:26:83:A5:3F:9A:0A:E1:D0"
       ]
     }
   }
